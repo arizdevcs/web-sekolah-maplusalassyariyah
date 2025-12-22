@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    
+    body {
+        @apply font-sans text-gray-800 antialiased;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    }
+    
+    .btn-secondary {
+        @apply bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-secondary-600 hover:to-secondary-700 transition-all duration-300 shadow-lg hover:shadow-xl;
+    }
+    
+    .card {
+        @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-primary-100;
+    }
+    
+    .section-title {
+        @apply font-display text-4xl md:text-5xl font-bold text-primary-900 mb-4;
+    }
+    
+    .section-subtitle {
+        @apply text-lg text-gray-600 max-w-2xl mx-auto;
+    }
+    
+    .input-field {
+        @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all duration-200;
+    }
+    
+    .navbar-link {
+        @apply text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium;
+    }
+    
+    /* Madrasah Theme Styles */
+    .madrasah-header {
+        @apply bg-gradient-to-r from-primary-900 via-primary-700 to-primary-800 text-white shadow-2xl;
+    }
+    
+    .madrasah-accent {
+        @apply bg-secondary-50 border-l-4 border-secondary-600;
+    }
+    
+    .madrasah-highlight {
+        @apply bg-gradient-to-r from-primary-50 to-secondary-50;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #0284c7, #0369a1);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #0369a1, #075985);
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero Pattern Background */
+.hero-pattern {
+    background-color: #0ea5e9;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Status Badge */
+.status-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold;
+}
+
+.status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-diterima {
+    @apply bg-primary-100 text-primary-800;
+}
+
+.status-ditolak {
+    @apply bg-red-100 text-red-800;
+}
