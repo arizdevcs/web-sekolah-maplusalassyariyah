@@ -3,6 +3,7 @@
 @section('title', 'Pendaftaran Siswa Baru - MA Plus Al Asyariyah')
 
 @section('content')
+
 <!-- Header -->
 <section class="bg-gradient-to-r from-primary-600 to-primary-800 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
